@@ -2,7 +2,7 @@ import React from 'react';
 import './Screen.css';
 import Button from './Button.js'
 
-const Screen = ({ text, title }) => {
+const Screen = ({ text, title, icons }) => {
   return (
     <div className='screen-container-screen'>
       <div className='screen-container-primary'>
