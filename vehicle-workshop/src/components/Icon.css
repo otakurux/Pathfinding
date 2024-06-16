@@ -1,0 +1,15 @@
+.icon-link {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .icon-img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+  }
+  
+  .icon-img:hover {
+    transform: scale(1.1);
+  }
+  
