@@ -1,4 +1,3 @@
-/* Estilos generales del contenedor principal */
 .respon-container-primary {
     display: flex;
     justify-content: center;
@@ -7,7 +6,6 @@
     background-color: #65006e;
   }
   
-  /* Estilos del contenedor secundario */
   .respon-container-secundary {
     display: flex;
     flex-direction: row;
@@ -21,7 +19,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Estilos comunes para contenedores positivos y negativos */
   .respon-container-positive, .respon-container-negative {
     display: flex;
     flex-direction: column;
@@ -32,7 +29,6 @@
     border-radius: 10px;
   }
   
-  /* Estilo para las imágenes */
   .respon-img {
     width: 100%;
     height: auto;
@@ -40,7 +36,6 @@
     margin-bottom: 20px;
   }
   
-  /* Estilo para los títulos */
   .respon-container-title {
     font-size: 24px;
     font-weight: bold;
@@ -48,7 +43,6 @@
     text-align: center;
   }
   
-  /* Estilos para los contenedores de las tarjetas */
   .respon-container-cards {
     display: flex;
     flex-direction: column;

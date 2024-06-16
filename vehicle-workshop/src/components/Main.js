@@ -8,6 +8,7 @@ import Screen from './Screen';
 import Information from './Information';
 import Gallery from './Gallery';
 import Responsabilities from './Responsabilities';
+import Footer from './Footer';
 
 function Main() {
 
@@ -69,7 +70,19 @@ function Main() {
   const positive = { src: '', title: '¿Qué es lo que cubre?', cards: cardPositive };
   const negative = { src: '', title: '¿Qué es lo que no cubre?', cards: cardNegative };
 
-
+  // Screen 5
+  const contactUs = [
+      'Dirección: Calle Falsa 123, Ciudad, País',
+      'Teléfono: +123 456 7890',
+      'Email: contacto@empresa.com'
+    ];
+  const we = {title:'Sobre nosotros', text:'Somos una empresa dedicada a brindar los mejores servicios de mantenimiento y reparación de vehículos. Nuestro compromiso es con la calidad y la satisfacción del cliente.'};
+  const links = [
+    {href:'', text:'Política de privacidad'},
+    {href:'', text:'Términos y condiciones'},
+    {href:'', text:'Preguntas frecuentes'}
+  ];
+  // icons of screen 1
 
   return (
     <div className="Main">
@@ -96,6 +109,13 @@ function Main() {
       <Responsabilities 
         positive={positive}
         negative={negative}
+      />
+
+      <Footer
+        contactUs={contactUs}
+        icons={icons}
+        we={we}
+        links={links}
       />
     </div>
   );
