@@ -1,8 +1,9 @@
 .fixed-div {
     position: fixed;
+    display: grid;
+    grid-template-columns: 1fr;
     bottom: 10px;
     right: 10px;
-    background-color: #333;
     color: white;
     padding: 10px;
     border-radius: 5px;
