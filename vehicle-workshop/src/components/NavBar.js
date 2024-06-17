@@ -4,10 +4,12 @@ import './NavBar.css';
 import Icon from './Icon';
 import Button from './Button';
 import RegistrationForm from './RegistrationForm';
+import LoginForm from './LoginForm';
 
 const NavBar = ( { icons, myApp } ) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isRegister, setIsRegister] = useState(false);
+  const [isLoging, setIsLoging] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -16,6 +18,11 @@ const NavBar = ( { icons, myApp } ) => {
   const  DropdownRegister = () => {
     setIsOpen(!isOpen);
     setIsRegister(!isRegister);
+  };
+
+  const  DropdownLoging = () => {
+    setIsOpen(!isOpen);
+    setIsLoging(!isLoging);
   };
 
   const generateIcons = () => {
@@ -40,14 +47,19 @@ const NavBar = ( { icons, myApp } ) => {
         <div className="overlay">
           <ul className="navbar-menu">
             <li className="navbar-item" onClick={toggleDropdown}>cerrar</li>
-            <li className="navbar-item" onClick={DropdownRegister}>registrarcce</li>
-            <li className="navbar-item" onClick={toggleDropdown}>inciar secion</li>
+            <li className="navbar-item" onClick={DropdownRegister}>registrarce</li>
+            <li className="navbar-item" onClick={DropdownLoging}>inciar secion</li>
           </ul>
         </div>
       )}
       {isRegister && (
         <div className='overlay'>
-          <RegistrationForm />
+          <RegistrationForm onClick={DropdownRegister}/>
+        </div>
+      )}
+      {isLoging && (
+        <div className='overlay'>
+          <LoginForm onClick={DropdownLoging}/>
         </div>
       )}
     </div>

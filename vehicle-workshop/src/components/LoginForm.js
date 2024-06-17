@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import './RegistrationForm.css';
+import './LoginForm.css';
 
 import Button from './Button';
 
-const RegistrationForm = ({ onClick }) => {
+const LoginForm = ({onClick}) => {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
-    password: '',
-    confirmPassword: ''
+    password: ''
   });
 
   const [errors, setErrors] = useState({});
@@ -23,10 +21,8 @@ const RegistrationForm = ({ onClick }) => {
 
   const validate = () => {
     const errors = {};
-    if (!formData.name) errors.name = 'Name is required';
     if (!formData.email) errors.email = 'Email is required';
     if (!formData.password) errors.password = 'Password is required';
-    if (formData.password !== formData.confirmPassword) errors.confirmPassword = 'Passwords do not match';
     return errors;
   };
 
@@ -37,11 +33,10 @@ const RegistrationForm = ({ onClick }) => {
       setErrors(validationErrors);
     } else {
       console.log('Form submitted successfully', formData);
+      // Aquí puedes manejar el envío del formulario, e.g., enviar los datos a una API
       setFormData({
-        name: '',
         email: '',
-        password: '',
-        confirmPassword: ''
+        password: ''
       });
       setErrors({});
     }
@@ -49,17 +44,6 @@ const RegistrationForm = ({ onClick }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        {errors.name && <span className="error">{errors.name}</span>}
-      </div>
       <div>
         <label htmlFor="email">Email:</label>
         <input
@@ -82,20 +66,9 @@ const RegistrationForm = ({ onClick }) => {
         />
         {errors.password && <span className="error">{errors.password}</span>}
       </div>
-      <div>
-        <label htmlFor="confirmPassword">Confirm Password:</label>
-        <input
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-        />
-        {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
-      </div>
-      <Button type={'primary'} text={'Registro'} onClick={onClick}/>
+      <Button text={'Login'} type="primary" onClick={onClick} />
     </form>
   );
 };
 
-export default RegistrationForm;
+export default LoginForm;
