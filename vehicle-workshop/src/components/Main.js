@@ -4,9 +4,14 @@ import phone from '../assets/phone.svg';
 import whatsApp from '../assets/whatsapp.svg';
 import facebook from '../assets/facebook.svg';
 import technicalService from '../assets/technicalService.png';
-import imgPrueba from '../assets/prueba.png';
+// import imgPrueba from '../assets/prueba.png';
 import ok from '../assets/ok.svg';
 import no from '../assets/forbidden.svg';
+
+import image01 from '../assets/image01.jpg';
+import image02 from '../assets/image02.jpg';
+import image03 from '../assets/image03.jpg';
+import image04 from '../assets/image04.jpg';
 
 import NavBar from './NavBar';
 import Screen from './Screen';
@@ -47,10 +52,10 @@ function Main() {
 
   // Screen 3
   const images = [
-    { key: 1, src: imgPrueba, alt: 'Image 1' },
-    { key: 2, src: imgPrueba, alt: 'Image 2' },
-    { key: 3, src: imgPrueba, alt: 'Image 3' },
-    { key: 4, src: imgPrueba, alt: 'Image 4' },
+    { key: 1, src: image01, alt: 'Image 1' },
+    { key: 2, src: image02, alt: 'Image 2' },
+    { key: 3, src: image03, alt: 'Image 3' },
+    { key: 4, src: image04, alt: 'Image 4' },
   ];
 
   // Screen 4
