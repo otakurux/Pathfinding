@@ -4,7 +4,6 @@ import phone from '../assets/phone.svg';
 import whatsApp from '../assets/whatsapp.svg';
 import facebook from '../assets/facebook.svg';
 import technicalService from '../assets/technicalService.png';
-// import imgPrueba from '../assets/prueba.png';
 import ok from '../assets/ok.svg';
 import no from '../assets/forbidden.svg';
 
@@ -21,6 +20,9 @@ import Responsabilities from './Responsabilities';
 import Footer from './Footer';
 
 function Main() {
+
+  // NamVar
+  const myApp = 'Mi Aplicación';
 
   // Screen 1
   const title = 'SERVICIO DE MANTENIMIENTO Y REPARACIÓN';
@@ -81,7 +83,7 @@ function Main() {
   const positive = { src:ok , title: '¿Qué es lo que cubre?', cards: cardPositive };
   const negative = { src:no , title: '¿Qué es lo que no cubre?', cards: cardNegative };
 
-  // Screen 5
+  // Footer 5
   const contactUs = [
       'Dirección: Calle Falsa 123, Ciudad, País',
       'Teléfono: +123 456 7890',
@@ -99,6 +101,7 @@ function Main() {
     <div className="Main">
       <NavBar
         icons={icons}
+        myApp={myApp}
       />
 
       <Screen
